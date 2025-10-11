@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi Akun</title>
+  <style>
+    /* Fieldset diberi border abu-abu, padding dalam 15px, jarak bawah 10px,
+       serta gap antar elemen 10px */
+    fieldset {
+      border: 1px solid #999;
+      padding: 15px;
+      margin-bottom: 10px;
+      gap: 10px; 
+    }
+    /* Label didesain agar inline-block dengan lebar tetap 150px dan margin bawah 5px */
+    label {
+      display: inline-block;
+      width: 150px;
+      margin-bottom: 5px;
+    }
+    /* Input dan select diberi padding dan margin bawah agar jarak antar elemen cukup */
+    input, select {
+      padding: 4px;
+      margin-bottom: 8px;
+    }
+    /* Class gender untuk blok jenis kelamin diberi margin atas dan tampil blok */
+    .gender {
+        display: block;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Judul utama halaman -->
+  <h1>Registrasi Akun</h1>
+  <!-- Form pendaftaran dengan action menuju halaman afterlogin.html -->
+  <form action="afterlogin.html">
+    <!-- Fieldset untuk mengelompokkan formulir -->
+    <fieldset>
+      <legend>Formulir Registrasi</legend>
+
+      <!-- Label dan input field untuk Nama -->
+      <label for="Nama">Masukkan nama:</label>
+      <input type="text" id="Nama" name="nama" placeholder="Muhammad Fauzan" required><br>
+
+      <!-- Label dan input text untuk NIM dengan validasi pola 9 digit angka -->
+      <label for="NIM">Masukkan NIM:</label>
+      <input pattern="[0-9]{9}" type="text" id="NIM" name="NIM" placeholder="202341076" required title="Masukkan 9 Digit angka"><br>
+
+      <!-- Label dan input email -->
+      <label for="Email">Masukkan email:</label>
+      <input type="email" id="Email" name="email" placeholder="MuhammadFauzan@gmail.com" required><br>
+
+      <!-- Pilihan radio jenis kelamin dengan label -->
+      <label>Jenis Kelamin</label>
+      <div class="gender">
+        <input type="radio" name="jk" id="Laki-laki">
+        <label for="Laki-laki">Laki-Laki</label>
+        <input type="radio" name="jk" id="Perempuan">
+        <label for="Perempuan">Perempuan</label><br>
+      </div>
+
+      <!-- Dropdown untuk pilihan agama -->
+      <label for="Agama">Agama</label>
+      <select id="Agama" name="Agama">
+        <option value="Islam">Islam</option>
+        <option value="Kristen">Kristen</option>
+        <option value="Hindhu">Hindhu</option>
+        <option value="Buddha">Buddha</option>
+        <option value="Konghucu">Konghucu</option>
+      </select><br>
+
+      <!-- Input password wajib diisi -->
+      <label for="password">Masukkan password:</label>
+      <input type="password" name="password" id="password" placeholder="admin123" required><br>
+
+      <!-- Konfirmasi password -->
+      <label for="konfirmasi">Konfirmasi password:</label>
+      <input type="password" name="password" id="konfirmasi" required><br>
+
+      <!-- Tombol submit untuk mengirim form -->
+      <input type="submit" value="Daftar">
+    </fieldset>
+  </form>
+</body>
+</html>
